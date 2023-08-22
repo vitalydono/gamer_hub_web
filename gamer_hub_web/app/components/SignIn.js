@@ -4,21 +4,21 @@ import Colors from '../appearance/Colors'
 import Form from '../Form/Form'
 import {Auth} from '../common/texts.js'
 
-const SignUp = () => {
-  const placeholders = ['Your Name', 'Email', 'Mobile Number', 'Password']
-  const buttonText = 'Sign up'
-  const {Register} = Auth
+const SignIn = () => {
+  const placeholders = ['Email', 'Password']
+  const buttonText = 'Sign in'
+  const {Login} = Auth
   return (
     <Container>
-      <Title>{Register.MainTitle}</Title>
-      <SubTitle>{Register.SubTitle}</SubTitle>
+      <Title>{Login.MainTitle}</Title>
+      <SubTitle>{Login.SubTitle}</SubTitle>
       <Form placeholders={placeholders} buttonText={buttonText} />
-      <AlreadyHaveText>{Register.BottomTitle}</AlreadyHaveText>
+      <AlreadyHaveText>{Login.BottomTitle}</AlreadyHaveText>
     </Container>
   )
 }
 
-export default SignUp
+export default SignIn
 
 const Container = styled.View`
   flex: 1;
