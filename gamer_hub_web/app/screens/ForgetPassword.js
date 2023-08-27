@@ -1,4 +1,5 @@
 import React from 'react'
+import Page from '../layouts/Page'
 
 const ForgetPassword = () => {
   const placeholders = ['Email']
@@ -6,11 +7,9 @@ const ForgetPassword = () => {
 
   const {Login} = Auth
   return (
-    <Container>
-      <Title>{Login.ForgetPasswordMainTitle}</Title>
-      <SubTitle>{Login.ForgetPasswordSubTitle}</SubTitle>
-      <Form placeholders={placeholders} buttonText={buttonText} />
-    </Container>
+    <Page>
+      <ForgetPassword />
+    </Page>
   )
 }
 
