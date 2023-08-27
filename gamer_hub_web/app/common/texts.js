@@ -8,5 +8,7 @@ export const Auth = {
     MainTitle: 'Sign in',
     SubTitle: 'Do not worry, We never spam!',
     BottomTitle: 'Do not have an account?',
+    ForgetPasswordMainTitle: 'Forgot Password',
+    ForgetPasswordSubTitle: 'Enter your email to get new password',
   },
 }

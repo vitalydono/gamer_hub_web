@@ -3,17 +3,27 @@ import styled from 'styled-components/native'
 import Colors from '../appearance/Colors'
 import Form from '../Form/Form'
 import {Auth} from '../common/texts.js'
+import {useNavigation} from '@react-navigation/native'
 
 const SignIn = () => {
   const placeholders = ['Email', 'Password']
   const buttonText = 'Sign in'
+  const navigation = useNavigation()
+  const externalText = 'Forgot Password?'
+  const goToSignUp = () => navigation.navigate('Register')
   const {Login} = Auth
   return (
     <Container>
       <Title>{Login.MainTitle}</Title>
       <SubTitle>{Login.SubTitle}</SubTitle>
-      <Form placeholders={placeholders} buttonText={buttonText} />
-      <AlreadyHaveText>{Login.BottomTitle}</AlreadyHaveText>
+      <Form
+        placeholders={placeholders}
+        buttonText={buttonText}
+        externalText={externalText}
+      />
+      <AlreadyHaveText onPress={() => goToSignUp()}>
+        {Login.BottomTitle}Signup
+      </AlreadyHaveText>
     </Container>
   )
 }
